@@ -28,7 +28,7 @@ const experience = [
   {
     company: "Pacific Life Insurance Company",
     via: "The Barbarian Group",
-    period: "Jul 2025 — Present",
+    period: "Jul 2025 — March 2026",
     role: "AEM Developer",
   },
   {
@@ -217,57 +217,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SKILLS */}
-      <section id="skills" className="py-32 bg-secondary/40 border-y border-border/60">
-        <div className="container max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-12 gap-12 mb-16">
-            <div className="md:col-span-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 03 / Stack</span>
-              <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
-                Tools of the trade.
-              </h2>
-            </div>
-            <div className="md:col-span-7 md:col-start-6 flex items-end">
-              <p className="text-muted-foreground">
-                A focused toolkit honed over four years across AEM 6.5 and AEM as a Cloud Service.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(skills).map(([cat, items], i) => (
-              <motion.div
-                key={cat}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="bg-card border border-border/60 rounded-lg p-6 hover:border-accent transition-colors"
-              >
-                <div className="flex items-baseline justify-between mb-4">
-                  <h3 className="font-display text-xl">{cat}</h3>
-                  <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
-                </div>
-                <ul className="space-y-2">
-                  {items.map((item) => (
-                    <li key={item} className="text-sm text-muted-foreground flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* EXPERIENCE */}
-      <section id="experience" className="py-32">
+      <section id="experience" className="py-32 bg-secondary/40 border-y border-border/60">
         <div className="container max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-12 mb-16">
             <div className="md:col-span-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 04 / Journey</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 03 / Journey</span>
               <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
                 Where I've shipped.
               </h2>
@@ -306,6 +261,51 @@ const Index = () => {
                 <div className="md:col-span-2 md:text-right">
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all inline-block" />
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="py-32">
+        <div className="container max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-12 gap-12 mb-16">
+            <div className="md:col-span-4">
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 04 / Stack</span>
+              <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
+                Tools of the trade.
+              </h2>
+            </div>
+            <div className="md:col-span-7 md:col-start-6 flex items-end">
+              <p className="text-muted-foreground">
+                A focused toolkit honed over four years across AEM 6.5 and AEM as a Cloud Service.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(skills).map(([cat, items], i) => (
+              <motion.div
+                key={cat}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className="bg-card border border-border/60 rounded-lg p-6 hover:border-accent transition-colors"
+              >
+                <div className="flex items-baseline justify-between mb-4">
+                  <h3 className="font-display text-xl">{cat}</h3>
+                  <span className="font-mono text-xs text-muted-foreground">0{i + 1}</span>
+                </div>
+                <ul className="space-y-2">
+                  {items.map((item) => (
+                    <li key={item} className="text-sm text-muted-foreground flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-accent" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
