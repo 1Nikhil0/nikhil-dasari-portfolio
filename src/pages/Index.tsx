@@ -19,6 +19,13 @@ const skills = {
 
 const experience = [
   {
+    company: "Nextrow Digital",
+    via: "Direct",
+    period: "Mar 2026 — Present",
+    role: "AEM Developer",
+    description: "Currently learning and working with AEM EDS (Adobe Experience Manager Edge Delivery Services) and Adobe Analytics.",
+  },
+  {
     company: "Pacific Life Insurance Company",
     via: "The Barbarian Group",
     period: "Jul 2025 — Present",
