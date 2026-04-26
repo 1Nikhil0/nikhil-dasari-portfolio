@@ -28,7 +28,7 @@ const experience = [
   {
     company: "Pacific Life Insurance Company",
     via: "The Barbarian Group",
-    period: "Jul 2025 — Present",
+    period: "Jul 2025 — March 2026",
     role: "AEM Developer",
   },
   {
