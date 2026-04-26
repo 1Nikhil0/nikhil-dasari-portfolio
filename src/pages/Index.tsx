@@ -19,6 +19,13 @@ const skills = {
 
 const experience = [
   {
+    company: "Nextrow Digital",
+    via: "Direct",
+    period: "Mar 2026 — Present",
+    role: "AEM Developer",
+    description: "Currently learning and working with AEM EDS (Adobe Experience Manager Edge Delivery Services) and Adobe Analytics.",
+  },
+  {
     company: "Pacific Life Insurance Company",
     via: "The Barbarian Group",
     period: "Jul 2025 — Present",
@@ -175,12 +182,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* CERTIFICATIONS */}
+      <section id="credentials" className="py-32 border-t border-border/60">
+        <div className="container max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-12 gap-12">
+            <div className="md:col-span-4">
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 02 / Credentials</span>
+              <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
+                Certified by Adobe.
+              </h2>
+            </div>
+            <div className="md:col-span-7 md:col-start-6 space-y-4">
+              {[
+                { title: "Adobe Certified Professional", sub: "Adobe Experience Manager Developer", platform: "Adobe" },
+                { title: "Adobe Certified Expert", sub: "Adobe Experience Manager Forms Developer", platform: "Adobe" },
+              ].map((c) => (
+                <div key={c.title} className="flex items-start gap-5 p-6 border border-border/60 rounded-lg hover:border-accent hover:shadow-card transition-all">
+                  <div className="w-12 h-12 rounded-full bg-accent-soft flex items-center justify-center flex-shrink-0">
+                    <Award className="w-5 h-5 text-accent" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="font-display text-xl">{c.title}</h3>
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent text-[10px] font-mono uppercase tracking-wider border border-accent/20">
+                        {c.platform}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-1">{c.sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SKILLS */}
       <section id="skills" className="py-32 bg-secondary/40 border-y border-border/60">
         <div className="container max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-12 mb-16">
             <div className="md:col-span-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 02 / Stack</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 03 / Stack</span>
               <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
                 Tools of the trade.
               </h2>
@@ -225,7 +267,7 @@ const Index = () => {
         <div className="container max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-12 gap-12 mb-16">
             <div className="md:col-span-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 03 / Journey</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 04 / Journey</span>
               <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
                 Where I've shipped.
               </h2>
@@ -255,42 +297,17 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground mt-1">
                     {job.role} · via <em className="italic">{job.via}</em>
                   </p>
+                  {job.description && (
+                    <p className="text-sm text-muted-foreground/90 mt-3 leading-relaxed">
+                      {job.description}
+                    </p>
+                  )}
                 </div>
                 <div className="md:col-span-2 md:text-right">
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:rotate-45 transition-all inline-block" />
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CERTIFICATIONS */}
-      <section className="py-32 border-t border-border/60">
-        <div className="container max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-12 gap-12">
-            <div className="md:col-span-4">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent">— 04 / Credentials</span>
-              <h2 className="font-display text-4xl md:text-5xl font-light mt-4 leading-tight">
-                Certified by Adobe.
-              </h2>
-            </div>
-            <div className="md:col-span-7 md:col-start-6 space-y-4">
-              {[
-                { title: "Adobe Certified Professional", sub: "Adobe Experience Manager Developer" },
-                { title: "Adobe Certified Expert", sub: "Adobe Experience Manager Forms Developer" },
-              ].map((c) => (
-                <div key={c.title} className="flex items-start gap-5 p-6 border border-border/60 rounded-lg hover:border-accent hover:shadow-card transition-all">
-                  <div className="w-12 h-12 rounded-full bg-accent-soft flex items-center justify-center flex-shrink-0">
-                    <Award className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-xl">{c.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{c.sub}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
