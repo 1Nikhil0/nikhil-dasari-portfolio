@@ -68,9 +68,9 @@ const Index = () => {
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
-            <a href="#skills" className="hover:text-foreground transition-colors">Skills</a>
-            <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
-            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+            <a href="#credentials" className="hover:text-foreground transition-colors">Credentials</a>
+            <a href="#experience" className="hover:text-foreground transition-colors">Journey</a>
+            <a href="#skills" className="hover:text-foreground transition-colors">Stack</a>
           </div>
           <a
             href="mailto:danielnikhil10@icloud.com"
