@@ -322,8 +322,8 @@ const Index = () => {
               <Phone className="w-4 h-4" /> +91 95029 78048
             </a>
             <span className="w-1 h-1 rounded-full bg-primary-foreground/30" />
-            <a href="#" className="hover:text-accent transition-colors"><Linkedin className="w-4 h-4" /></a>
-            <a href="#" className="hover:text-accent transition-colors"><Github className="w-4 h-4" /></a>
+            <a href="#" aria-label="LinkedIn" className="hover:text-accent transition-colors"><LinkedinIcon className="w-4 h-4" /></a>
+            <a href="#" aria-label="GitHub" className="hover:text-accent transition-colors"><GithubIcon className="w-4 h-4" /></a>
           </div>
         </div>
       </section>
