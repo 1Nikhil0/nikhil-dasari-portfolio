@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MapPin, Phone, Award, Code2, Layers, Zap } from "lucide-react";
 
 const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" /></svg>
 );
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.01c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.01c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z" /></svg>
 );
 
 const skills = {
@@ -195,23 +195,43 @@ const Index = () => {
             </div>
             <div className="md:col-span-7 md:col-start-6 space-y-4">
               {[
-                { title: "Adobe Certified Professional", sub: "Adobe Experience Manager Developer", platform: "Adobe" },
-                { title: "Adobe Certified Expert", sub: "Adobe Experience Manager Forms Developer", platform: "Adobe" },
+                {
+                  title: "Adobe Certified Professional",
+                  sub: "Adobe Experience Manager Developer",
+                  platform: "Adobe",
+                  url: "https://certification.adobe.com/credential/verify/898234ec-af3f-42e1-b42a-be5e94eb0bdc"
+                },
+                {
+                  title: "Adobe Certified Expert",
+                  sub: "Adobe Experience Manager Forms Developer",
+                  platform: "Adobe",
+                  url: "https://certification.adobe.com/credential/verify/95821776-4bf1-11f0-9b2a-42010a400fc3"
+                },
               ].map((c) => (
-                <div key={c.title} className="flex items-start gap-5 p-6 border border-border/60 rounded-lg hover:border-accent hover:shadow-card transition-all">
-                  <div className="w-12 h-12 rounded-full bg-accent-soft flex items-center justify-center flex-shrink-0">
-                    <Award className="w-5 h-5 text-accent" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="font-display text-xl">{c.title}</h3>
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent text-[10px] font-mono uppercase tracking-wider border border-accent/20">
-                        {c.platform}
-                      </span>
+                <a
+                  key={c.title}
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group" // "block" makes the whole area clickable
+                >
+                  <div className="flex items-start gap-5 p-6 border border-border/60 rounded-lg group-hover:border-accent group-hover:shadow-card transition-all bg-card">
+                    <div className="w-12 h-12 rounded-full bg-accent-soft flex items-center justify-center flex-shrink-0">
+                      <Award className="w-5 h-5 text-accent" />
                     </div>
-                    <p className="text-sm text-muted-foreground mt-1">{c.sub}</p>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="font-display text-xl group-hover:text-accent transition-colors">
+                          {c.title}
+                        </h3>
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent text-[10px] font-mono uppercase tracking-wider border border-accent/20">
+                          {c.platform}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-1">{c.sub}</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -340,8 +360,8 @@ const Index = () => {
               <Phone className="w-4 h-4" /> +91 95029 78048
             </a>
             <span className="w-1 h-1 rounded-full bg-primary-foreground/30" />
-            <a href="#" aria-label="LinkedIn" className="hover:text-accent transition-colors"><LinkedinIcon className="w-4 h-4" /></a>
-            <a href="#" aria-label="GitHub" className="hover:text-accent transition-colors"><GithubIcon className="w-4 h-4" /></a>
+            <a href="https://www.linkedin.com/in/nikhil-dasari-35645320a/" aria-label="LinkedIn" className="hover:text-accent transition-colors"><LinkedinIcon className="w-4 h-4" /></a>
+            <a href="https://github.com/1Nikhil0" aria-label="GitHub" className="hover:text-accent transition-colors"><GithubIcon className="w-4 h-4" /></a>
           </div>
         </div>
       </section>
