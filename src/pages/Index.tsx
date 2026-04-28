@@ -133,7 +133,7 @@ const Index = () => {
               { k: "4+", v: "Years experience" },
               { k: "3", v: "Enterprise clients" },
               { k: "2", v: "Adobe certifications" },
-              { k: "AEM 6.5", v: "& Cloud Service" },
+              { k: "AEMaaCS", v: "& AEM 6.5" },
             ].map((s) => (
               <div key={s.v} className="bg-card p-6">
                 <div className="font-display text-3xl md:text-4xl font-light">{s.k}</div>
