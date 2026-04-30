@@ -133,7 +133,7 @@ const Index = () => {
               { k: "4+", v: "Years experience" },
               { k: "3", v: "Enterprise clients" },
               { k: "2", v: "Adobe certifications" },
-              { k: "AEMaaCS", v: "& AEM 6.5" },
+              { k: "AEMaaCS", v: "Edge Delivery Services (EDS) & AEM 6.5" },
             ].map((s) => (
               <div key={s.v} className="bg-card p-6">
                 <div className="font-display text-3xl md:text-4xl font-light">{s.k}</div>
@@ -206,6 +206,12 @@ const Index = () => {
                   sub: "Adobe Experience Manager Forms Developer",
                   platform: "Adobe",
                   url: "https://certification.adobe.com/credential/verify/95821776-4bf1-11f0-9b2a-42010a400fc3"
+                },
+                {
+                  title: "Adobe Certified Professional",
+                  sub: "Adobe Experience Manager Edge Delivery Services",
+                  platform: "Adobe",
+                  url: "public/nikhil-dasari-aem-edge-delivery-services-developer-professional-20260430.pdf"
                 },
               ].map((c) => (
                 <a
