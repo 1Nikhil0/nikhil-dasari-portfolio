@@ -211,7 +211,7 @@ const Index = () => {
                   title: "Adobe Certified Professional",
                   sub: "Adobe Experience Manager Edge Delivery Services",
                   platform: "Adobe",
-                  url: "public/nikhil-dasari-aem-edge-delivery-services-developer-professional-20260430.pdf"
+                  url: "/nikhil-dasari-aem-edge-delivery-services-developer-professional-20260430.pdf"
                 },
               ].map((c) => (
                 <a
